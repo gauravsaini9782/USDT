@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="text-center relative flex flex-col items-center z-10">
         <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-500 to-teal-400 shadow-xl">
           <img
-            src="/public/60b0fb4d-86f5-49a0-8b82-b28506e0ccd8.jpg"
+            src="/60b0fb4d-86f5-49a0-8b82-b28506e0ccd8.jpg" // Correct path for deployment
             alt="Profile"
             className="w-full h-full object-cover"
           />
@@ -42,6 +42,16 @@ const HeroSection = () => {
       {/* Subscribers Counter */}
       <div className="mt-8 text-2xl md:text-3xl font-bold text-white relative z-10">
         Subscribers: <span className="text-gradient">{subscribers}+</span>
+      </div>
+
+      {/* Join Telegram Section */}
+      <div className="mt-6 relative z-10">
+        <button
+          className="bg-gradient-to-r from-blue-500 to-teal-400 hover:from-teal-400 hover:to-blue-500 text-white py-3 px-8 rounded-lg text-lg font-semibold shadow-lg hover:shadow-2xl transition duration-300"
+          onClick={() => window.open('https://t.me/bestsellerindia01', '_blank')}
+        >
+          Join Our Telegram Group
+        </button>
       </div>
 
       {/* Features Section */}
@@ -67,16 +77,6 @@ const HeroSection = () => {
         <div>
           <CountdownTimer />
         </div>
-      </div>
-
-      {/* Join Telegram Section */}
-      <div className="mt-12 relative z-10">
-        <button
-          className="bg-gradient-to-r from-blue-500 to-teal-400 hover:from-teal-400 hover:to-blue-500 text-white py-3 px-8 rounded-lg text-lg font-semibold shadow-lg hover:shadow-2xl transition duration-300"
-          onClick={() => window.open('https://t.me/bestsellerindia01', '_blank')}
-        >
-          Join Our Telegram Group
-        </button>
       </div>
     </div>
   );
